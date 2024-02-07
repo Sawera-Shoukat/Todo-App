@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+body{
+    /* background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);*/
+   
+    height: 100vh; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 10rem; */
+    align-items: center;
+    background-image: url(img/t.jpg);
+    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;;
+    backdrop-filter: blur(8px);
+
+}
+.container{
+    /* width: 450px; */
+    /* border: 2px solid red; */
+    padding: 33px;
+    text-align: center;
+    background-color: burlywood;
+    left: 20px;
+    border-radius: 10px;
+    /* margin-left: 33%; */
+    /* margin-top: 50px; */
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    
+    
+}
+.input{
+    padding-top: 30px;
+}
+input{
+    width: 270px;
+    padding: 8px;
+    border: 2px solid black;
+    outline: none;
+}
+button{
+    width: 60px;
+    height: 41px;
+    background-color: black;
+    color: white;
+    border-radius:2px ;
+    border: none;
+    outline: none;
+}
+.text ul{
+    position: relative;
+    background-color: bisque;
+    color: white;
+    font-size: 19px;
+    text-align: left;
+    padding: 7px;
+}
+.text ul i{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+/* Add this style for better spacing */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 10px; /* Adjust the margin as needed */
+}

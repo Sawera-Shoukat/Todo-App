@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Montserrat:ital,wght@0,300;1,300;1,400&family=Open+Sans:ital,wght@1,300&family=PT+Sans:ital@1&family=Playfair+Display:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="box">
+        <h1 style="padding-top: 20px;">ToDo App</h1>
+        <div class="input">
+            <input type="text" placeholder="Enter your task" id="int" style="margin: 20px; ">
+            <button onclick="add()" >Add</button>
+        </div>
+        <ul class="text"></ul>
+    </div>
+
+<!-- ... (your existing HTML code) ... -->
+<script>
+    let input = document.getElementById("int");
+    let ul = document.querySelector(".text");
+
+    function add() {
+        if (input.value === "") {
+            alert("Please enter your Task");
+        } else {
+            let newLi = document.createElement("li");
+
+            // Create a span for the task text
+            let taskSpan = document.createElement("span");
+            taskSpan.innerHTML = input.value;
+            newLi.appendChild(taskSpan);
+
+            // Create a remove button
+            let removeButton = document.createElement("button");
+            removeButton.innerHTML = "Remove";
+            removeButton.addEventListener("click", function() {
+                newLi.remove();
+            });
+
+            // Create a span for the remove button and append it to the task
+            let removeSpan = document.createElement("span");
+            removeSpan.appendChild(removeButton);
+            newLi.appendChild(removeSpan);
+
+            // Append the task to the list
+            ul.appendChild(newLi);
+
+            input.value = ""; // Clear the input field after adding a task
+        }
+    }
+</script>
+<!-- ... (rest of your HTML code) ... -->
+
+</body>
+</html>
